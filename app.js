@@ -15,22 +15,22 @@ const completedTasksHolder = document.getElementById("completed-tasks");//comple
 
 
 //New task list item
-var createNewTaskElement = function(taskString) {
+const createNewTaskElement = function(taskString) {
 
-    var listItem = document.createElement("li");
+    let listItem = document.createElement("li");
 
     //input (checkbox)
-    var checkBox = document.createElement("input");//checkbx
+    let checkBox = document.createElement("input");//checkbx
     //label
-    var label = document.createElement("label");//label
+    let label = document.createElement("label");//label
     //input (text)
-    var editInput = document.createElement("input");//text
+    let editInput = document.createElement("input");//text
     //button.edit
-    var editButton = document.createElement("button");//edit button
+    let editButton = document.createElement("button");//edit button
 
     //button.delete
-    var deleteButton = document.createElement("button");//delete button
-    var deleteButtonImg = document.createElement("img");//delete button image
+    let deleteButton = document.createElement("button");//delete button
+    let deleteButtonImg = document.createElement("img");//delete button image
 
     label.innerText = taskString;
     label.className = "task";
@@ -152,7 +152,7 @@ addButton.addEventListener("click",addTask);
 addButton.addEventListener("click",ajaxRequest);
 
 
-var bindTaskEvents = function(taskListItem,checkBoxEventHandler) {
+var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
     console.log("bind list item events");
 //select ListItems children
     var checkBox = taskListItem.querySelector("input[type=checkbox]");
